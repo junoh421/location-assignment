@@ -24,7 +24,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'valid_attribute'
   gem 'rails-controller-testing'
-  gem 'dotenv-rails', :groups => [:development, :test]
+  gem 'dotenv-rails'
 end
 
 group :development do

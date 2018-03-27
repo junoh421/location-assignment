@@ -22,8 +22,8 @@ class LocationsController < ApplicationController
         redirect_to locations_path
       end
     else
-      flash[:error] = response["status"] if response["status"] == "ZERO RESULTS"
-      flash[:error] = response["error_message"] if response["status"] == "INVALID_REQUEST"
+      flash[:error] = "The request did not encounter any errors, but return no results." if response["status"] == "ZERO_RESULTS"
+      flash[:error] = "Please enter a query to geocode, or click on the map to reverse geocode." if response["status"] == "INVALID_REQUEST"
 
       redirect_to locations_path
     end

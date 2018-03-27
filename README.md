@@ -1,24 +1,9 @@
-# README
+Live demo: [assignment-location](https://location-rails.herokuapp.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Assignment
+- Single web page that allows a user to input an address and geocode it using the Google geocoding API. If it successfully geocodes the location, it should store the location and longitude/latitude in a database table. The web page should list the entries of the table on the bottom of the page.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Implementation/Technologies
+- Rails
+- Bootstrap
+- Faraday
