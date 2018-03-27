@@ -1,0 +1,16 @@
+<div class="locations">
+  <h1 class="display-3 text-center my-4">Locations</h1>
+  <div class="container">
+    <%= form_for :location, as: :post, url: locations_path, html: { class: "location-search input-group" } do |f| %>
+      <%= f.text_field :address, placeholder: "Search location ... ", class:"form-control" %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    <% end %>
+    <%= render 'error' %>
+  <div class="container">
+    <ul class="list-group my-4">
+      <% @locations.each do |location| %>
+        <a class="list-group-item list-group-item-action" href="#">Address: <%= location.address %>; Longitude/Latitude: <%= location.longitude %> / <%= location.latitude %></a>
+      <% end %>
+    </ul>
+  </div>
+</div>
